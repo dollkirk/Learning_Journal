@@ -29,4 +29,8 @@ The "Jump()" function was no longer working after creating a way to check for if
 When checking if the player object is grounded, I am using a raycast to point downwards originating at the distance of half the player objects height down to the bottom of the player object (plus 0.2f to give nudge room). The layer it is looking for is called "Grounded" and the plane I have created has that layer assigned. 
 To check if this was working, I used "Debug.Log" to display if the boolean variable "grounded" is becoming set to equal true when the player object is just placed on the plane. This displayed in the console that the value of "grounded" was actually false at the start. Therefore, the raycast was not hitting the ground at the start.
 
+![Screenshot 2023-01-31 135420](https://user-images.githubusercontent.com/114989045/215807827-53010042-2c8d-4ad0-bbd5-311880483c57.png)
+
+![Screenshot 2022-10-18 115531](https://user-images.githubusercontent.com/114989045/215807872-35b80725-7fd3-4b44-870f-9450df23c03f.png)
+
 As shown above, I changed the nudge room float of 0.2f to 0.51 by testing it in Unity.
