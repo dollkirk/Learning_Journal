@@ -20,3 +20,13 @@ Now that the forces were being applied to the player, I realised that it was kno
 ![Screenshot 2023-01-31 135420](https://user-images.githubusercontent.com/114989045/215779295-192c348c-3768-4531-adbe-bdb68646f84f.png)
 
 Using the rigidbody component on the player object, I freezed the rotations.
+
+
+#### PROBLEM:
+The "Jump()" function was no longer working after creating a way to check for if the player object is grounded (touching the plane with the layer "Ground".
+
+#### SOLUTION:
+When checking if the player object is grounded, I am using a raycast to point downwards originating at the distance of half the player objects height down to the bottom of the player object (plus 0.2f to give nudge room). The layer it is looking for is called "Grounded" and the plane I have created has that layer assigned. 
+To check if this was working, I used "Debug.Log" to display if the boolean variable "grounded" is becoming set to equal true when the player object is just placed on the plane. This displayed in the console that the value of "grounded" was actually false at the start. Therefore, the raycast was not hitting the ground at the start.
+
+As shown above, I changed the nudge room float of 0.2f to 0.51 by testing it in Unity.
