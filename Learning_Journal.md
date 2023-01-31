@@ -31,5 +31,6 @@ To check if this was working, I used "Debug.Log" to display if the boolean varia
 
 ![Screenshot 2023-01-31 154513](https://user-images.githubusercontent.com/114989045/215807971-141fa5a1-5f3c-4f23-8257-3a9f8cacc6a5.png)
 
+![Screenshot 2023-01-31 154526](https://user-images.githubusercontent.com/114989045/215808052-b4f4c77d-3433-4003-986e-2a70ed051195.png)
 
 As shown above, I changed the nudge room float of 0.2f to 0.51 by testing it in Unity.
