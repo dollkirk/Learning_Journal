@@ -18,3 +18,5 @@ Now that the forces were being applied to the player, I realised that it was kno
 #### SOLUTION:
 
 ![Screenshot 2023-01-31 135420](https://user-images.githubusercontent.com/114989045/215779295-192c348c-3768-4531-adbe-bdb68646f84f.png)
+
+Using the rigidbody component on the player object, I freezed the rotations.
