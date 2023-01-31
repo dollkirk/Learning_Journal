@@ -1,6 +1,6 @@
 # LEARNING JOURNAL
 
-## Component Package One- 3D Player Controller
+## Component Package One - 3D Player Controller
 
 
 #### PROBLEM:
@@ -11,3 +11,10 @@ When creating the general "PlayerController" script, I wanted to move the player
 ![Screenshot 2022-10-18 115531](https://user-images.githubusercontent.com/114989045/215777158-be9a8f9b-ddfd-4aa7-8978-33034f913995.png)
 
 As shown above, I decided to comment out the "MovePlayer()" function for now and placed the line of code that applies the forces to the player's rigidbody in the "MyInput()" function. During this process, I realised that the player object would have a force applied horizontally, however, not vertically. This was due to a typo error when putting in the "AddForce" coordinates.
+
+#### PROBLEM:
+Now that the forces were being applied to the player, I realised that it was knocking the player object over instead of sliding it over to the side. This meant I needed to somehow freeze the player object's rotation in all of the axes.
+
+#### SOLUTION:
+
+![Screenshot 2023-01-31 135420](https://user-images.githubusercontent.com/114989045/215779295-192c348c-3768-4531-adbe-bdb68646f84f.png)
