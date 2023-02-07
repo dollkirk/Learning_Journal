@@ -47,4 +47,6 @@ I created two new private integer variables: "maximumJumps" equal to 2, and "cur
 
 ![Screenshot 2023-02-07 105124](https://user-images.githubusercontent.com/114989045/217227215-8767aae2-5a5b-40c8-a72c-f9da528eb705.png)
 
-Next, I needed to edit the jump key input if statement in the "MyInput()" function. 
+Next, I needed to edit the jump key input if statement in the "MyInput()" function. I changed the statement to if the player is "grounded" or if the number of "currentJump" is less than the number of "maximumJumps". I then incremented the value of "currentJump" whenever that if statement happens.
+
+![Screenshot 2023-02-07 105150](https://user-images.githubusercontent.com/114989045/217228710-1bd2c9bb-6fa9-444b-8006-33f3bcdde626.png)
