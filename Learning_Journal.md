@@ -37,7 +37,9 @@ As shown above, I changed the nudge room float of 0.2f to 0.51 by testing it in 
 
 #### PROBLEM:
 I wanted to create a double jump for my Player Controller script. First, I tried using a  nested if statement to call the function "Jump()" again when the space key is pressed again when the player object is not "grounded".
+
 ![Screenshot 2023-02-07 102736](https://user-images.githubusercontent.com/114989045/217223685-eac3d517-65a6-448a-ad29-547940a92261.png)
+
 This did not work. Next, I tried a while loop to say whilst the player is not "grounded", check the if statement of if the space key is pressed. This did not work either.
 
 #### SOLUTION:
