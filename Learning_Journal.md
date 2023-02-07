@@ -50,3 +50,13 @@ I created two new private integer variables: "maximumJumps" equal to 2, and "cur
 Next, I needed to edit the jump key input if statement in the "MyInput()" function. I changed the statement to if the player is "grounded" or if the number of "currentJump" is less than the number of "maximumJumps". I then incremented the value of "currentJump" whenever that if statement happens.
 
 ![Screenshot 2023-02-07 105150](https://user-images.githubusercontent.com/114989045/217228710-1bd2c9bb-6fa9-444b-8006-33f3bcdde626.png)
+
+#### PROBLEM:
+I created a new script called "PlayerPickup" to allow the player object to pick up certain interactable objects. I did this by creating 2 functions, "OnMouseDown()" and "OnMouseUp()". I then accessed the interactable object's rigidbody and set the gravity as false when "OnMouseDown()". I did the same in the "OnMouseUp()" function but set the gravity back to true. I also set the transform position of the interactable object equal to the same position of the empty child object named "Destination". This worked and allowed the player to pick up the interactable object, however, it did not update the "Destination" psotion when the player moved, and kept the interactable object in that same position.
+
+#### SOLUTION:
+I created a boolean variable named "MouseDown" and set it as true when "OnMouseDown()" was called, and set it as false when "OnMouseUp()" was called. Then I placed all of the transforms and Rigidbody code into an if statement in the update function as below:
+
+![Screenshot 2023-02-07 131409](https://user-images.githubusercontent.com/114989045/217254632-f238d241-43d6-4db5-ac0c-74d4adf6167f.png)
+
+
