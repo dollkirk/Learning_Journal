@@ -43,3 +43,8 @@ I wanted to create a double jump for my Player Controller script. First, I tried
 This did not work. Next, I tried a while loop to say whilst the player is not "grounded", check the if statement of if the space key is pressed. This did not work either.
 
 #### SOLUTION:
+I created two new private integer variables: "maximumJumps" equal to 2, and "currentJump" equal to 0. In the update function, I then needed to set "currentJump" equal to 0 when the player is "grounded" as the player shouldn't be able to double jump when grounded, only singular jump.
+
+![Screenshot 2023-02-07 105124](https://user-images.githubusercontent.com/114989045/217227215-8767aae2-5a5b-40c8-a72c-f9da528eb705.png)
+
+Next, I needed to edit the jump key input if statement in the "MyInput()" function. 
