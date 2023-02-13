@@ -66,3 +66,11 @@ I edited the "PlayerController" script to rotate the player object in the direct
 I changed the if statement that was checking the player object's rigidbody velocity. I added that the player needed to be "grounded" and that the rigidbody velocity shouldbe equal to not(0, -1, 0) for it to happen.
 
 ![Screenshot 2023-02-13 124625](https://user-images.githubusercontent.com/114989045/218461304-55ea7117-7924-417c-88b0-b1b21cd8074a.png)
+
+
+## Component Package Two - Companion Controller
+
+#### PROBLEM:
+
+
+#### SOLUTION:
