@@ -59,4 +59,10 @@ I created a boolean variable named "MouseDown" and set it as true when "OnMouseD
 
 ![Screenshot 2023-02-07 131409](https://user-images.githubusercontent.com/114989045/217254632-f238d241-43d6-4db5-ac0c-74d4adf6167f.png)
 
+#### PROBLEM:
+I edited the "PlayerController" script to rotate the player object in the direction of where it is moving. This worked, however, when the player jumped, the player object would land and lay vertically face down.
 
+#### SOLUTION:
+I changed the if statement that was checking the player object's rigidbody velocity. I added that the player needed to be "grounded" and that the rigidbody velocity shouldbe equal to not(0, -1, 0) for it to happen.
+
+![Screenshot 2023-02-13 124625](https://user-images.githubusercontent.com/114989045/218461304-55ea7117-7924-417c-88b0-b1b21cd8074a.png)
