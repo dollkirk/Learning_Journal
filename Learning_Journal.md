@@ -74,3 +74,16 @@ I changed the if statement that was checking the player object's rigidbody veloc
 
 
 #### SOLUTION:
+
+
+## Component Package Three - Reset Area
+
+#### PROBLEM:
+I created a script called "ResetArea" that created an array and destroyed each object in that array when the player object collides with the area collider. I tried to use "Length" to find the maximum amount of objects in the array and to then destroy the objects by doing "Destroy(gameObjects[max])". However, this just destroyed the gameobject in the last position of the array.
+
+#### SOLUTION:
+I instead used "foreach" to do this as shown below:
+
+![Screenshot 2023-02-14 124835](https://user-images.githubusercontent.com/114989045/218743298-487e6db0-241b-4f6d-8fc0-6ea538c8408c.png)
+
+
