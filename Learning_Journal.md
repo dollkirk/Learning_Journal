@@ -76,7 +76,7 @@ I changed the if statement that was checking the player object's rigidbody veloc
 #### SOLUTION:
 
 
-## Component Package Three - Reset Area
+## Component Package Three - Reset Area/Companions
 
 #### PROBLEM:
 I created a script called "ResetArea" that created an array and destroyed each object in that array when the player object collides with the area collider. I tried to use "Length" to find the maximum amount of objects in the array and to then destroy the objects by doing "Destroy(gameObjects[max])". However, this just destroyed the gameobject in the last position of the array.
@@ -86,4 +86,8 @@ I instead used "foreach" to do this as shown below:
 
 ![Screenshot 2023-02-14 124835](https://user-images.githubusercontent.com/114989045/218743298-487e6db0-241b-4f6d-8fc0-6ea538c8408c.png)
 
+#### PROBLEM:
+I realised that the method of resetting the area was inefficient for the functions I wanted to add: I wanted the objects to be AI and when the player collides with the AI, it follows just as it does in the Component Package One. Therefore, I needed to create a state machine to give the AI functions for when it is hostile and when it is a companion.
 
+#### SOLUTION:
+I created 5 new scripts to function as this state machine: "AIStateController", "AIState", "AIEnemySate" for when the AI is hostile, "AIEnemyMove" to move the AI in a patrol movement when it is in "AIEnemyState" and "AICompanionState" for when the player collides with the AI.
