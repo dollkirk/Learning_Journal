@@ -91,3 +91,12 @@ I realised that the method of resetting the area was inefficient for the functio
 
 #### SOLUTION:
 I created 5 new scripts to function as this state machine: "AIStateController", "AIState", "AIEnemySate" for when the AI is hostile, "AIEnemyMove" to move the AI in a patrol movement when it is in "AIEnemyState" and "AICompanionState" for when the player collides with the AI.
+
+#### PROBLEM:
+When setting the movement points for when the AI is in the "AIEnemyState" in the script "AIEnemyMove", I used an "OnTriggerEnter" function to say that when the AI collides with the points that have this script attached, the AI will move to the next point in the order of the points array. However, this did not work when tested in Unity.
+
+#### SOLUTION:
+I added a rigidbody component to the movement points in the array.
+
+![Screenshot 2023-02-17 160207](https://user-images.githubusercontent.com/114989045/219703949-87f6bcc0-6694-4d08-b86a-519e70aac957.png)
+
