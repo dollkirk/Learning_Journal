@@ -10,6 +10,7 @@ When creating the general "PlayerController" script, I wanted to move the player
 
 ![Screenshot 2022-10-18 115531](https://user-images.githubusercontent.com/114989045/215777158-be9a8f9b-ddfd-4aa7-8978-33034f913995.png)
 
+
 As shown above, I decided to comment out the "MovePlayer()" function for now and placed the line of code that applies the forces to the player's rigidbody in the "MyInput()" function. During this process, I realised that the player object would have a force applied horizontally, however, not vertically. This was due to a typo error when putting in the "AddForce" coordinates.
 
 #### PROBLEM:
@@ -18,6 +19,7 @@ Now that the forces were being applied to the player, I realised that it was kno
 #### SOLUTION:
 
 ![Screenshot 2023-01-31 135420](https://user-images.githubusercontent.com/114989045/215779295-192c348c-3768-4531-adbe-bdb68646f84f.png)
+
 
 Using the rigidbody component on the player object, I freezed the rotations.
 
@@ -31,7 +33,9 @@ To check if this was working, I used "Debug.Log" to display if the boolean varia
 
 ![Screenshot 2023-01-31 154513](https://user-images.githubusercontent.com/114989045/215807971-141fa5a1-5f3c-4f23-8257-3a9f8cacc6a5.png)
 
+
 ![Screenshot 2023-01-31 154526](https://user-images.githubusercontent.com/114989045/215808052-b4f4c77d-3433-4003-986e-2a70ed051195.png)
+
 
 As shown above, I changed the nudge room float of 0.2f to 0.51 by testing it in Unity.
 
@@ -40,6 +44,7 @@ I wanted to create a double jump for my Player Controller script. First, I tried
 
 ![Screenshot 2023-02-07 102736](https://user-images.githubusercontent.com/114989045/217223685-eac3d517-65a6-448a-ad29-547940a92261.png)
 
+
 This did not work. Next, I tried a while loop to say whilst the player is not "grounded", check the if statement of if the space key is pressed. This did not work either.
 
 #### SOLUTION:
@@ -47,9 +52,11 @@ I created two new private integer variables: "maximumJumps" equal to 2, and "cur
 
 ![Screenshot 2023-02-07 105124](https://user-images.githubusercontent.com/114989045/217227215-8767aae2-5a5b-40c8-a72c-f9da528eb705.png)
 
+
 Next, I needed to edit the jump key input if statement in the "MyInput()" function. I changed the statement to if the player is "grounded" or if the number of "currentJump" is less than the number of "maximumJumps". I then incremented the value of "currentJump" whenever that if statement happens.
 
 ![Screenshot 2023-02-07 105150](https://user-images.githubusercontent.com/114989045/217228710-1bd2c9bb-6fa9-444b-8006-33f3bcdde626.png)
+
 
 #### PROBLEM:
 I created a new script called "PlayerPickup" to allow the player object to pick up certain interactable objects. I did this by creating 2 functions, "OnMouseDown()" and "OnMouseUp()". I then accessed the interactable object's rigidbody and set the gravity as false when "OnMouseDown()". I did the same in the "OnMouseUp()" function but set the gravity back to true. I also set the transform position of the interactable object equal to the same position of the empty child object named "Destination". This worked and allowed the player to pick up the interactable object, however, it did not update the "Destination" psotion when the player moved, and kept the interactable object in that same position.
@@ -58,6 +65,7 @@ I created a new script called "PlayerPickup" to allow the player object to pick 
 I created a boolean variable named "MouseDown" and set it as true when "OnMouseDown()" was called, and set it as false when "OnMouseUp()" was called. Then I placed all of the transforms and Rigidbody code into an if statement in the update function as below:
 
 ![Screenshot 2023-02-07 131409](https://user-images.githubusercontent.com/114989045/217254632-f238d241-43d6-4db5-ac0c-74d4adf6167f.png)
+
 
 #### PROBLEM:
 I edited the "PlayerController" script to rotate the player object in the direction of where it is moving. This worked, however, when the player jumped, the player object would land and lay vertically face down.
@@ -100,3 +108,13 @@ I added a rigidbody component to the movement points in the array.
 
 ![Screenshot 2023-02-17 160207](https://user-images.githubusercontent.com/114989045/219703949-87f6bcc0-6694-4d08-b86a-519e70aac957.png)
 
+
+#### PROBLEM:
+I wanted to change the state back to the "AIEnemySate" script when it is in the "CompanionState" script and collides with a trigger death zone. I created a trigger function to check if the AI game object collides with the trigger with the tag "DeathZone". If it does, I then changed the state to the "enemyState". This worked, however, the AI was not going back to its patrol points.
+
+![Screenshot 2023-02-21 104710](https://user-images.githubusercontent.com/114989045/220324337-f21a5b2c-9676-44cd-ae9e-46a17a8c3a5d.png)
+
+
+#### SOLUTION:
+
+![Screenshot 2023-02-21 104735](https://user-images.githubusercontent.com/114989045/220324503-e6213ba9-295a-4ce1-8896-79330eb32d8f.png)
