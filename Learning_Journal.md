@@ -116,5 +116,6 @@ I wanted to change the state back to the "AIEnemySate" script when it is in the 
 
 
 #### SOLUTION:
+I realised that the target points were being set in the "Start()" function. This meant I needed to set them again when the state changes back to "AIEnemyState". Therefore, i put the target transforms into this trigger function as shown below:
 
 ![Screenshot 2023-02-21 104735](https://user-images.githubusercontent.com/114989045/220324503-e6213ba9-295a-4ce1-8896-79330eb32d8f.png)
