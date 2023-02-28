@@ -121,9 +121,16 @@ I realised that the target points were being set in the "Start()" function. This
 ![Screenshot 2023-02-21 104735](https://user-images.githubusercontent.com/114989045/220324503-e6213ba9-295a-4ce1-8896-79330eb32d8f.png)
 
 
-## Component Package Three - Reset Area/Companions
+## Component Package Four - Wind Cycle
 
 #### PROBLEM:
-I created a script called "ResetArea" that created an array and destroyed each object in that array when the player object collides with the area collider. I tried to use "Length" to find the maximum amount of objects in the array and to then destroy the objects by doing "Destroy(gameObjects[max])". However, this just destroyed the gameobject in the last position of the array.
+I created a state machine using 5 scripts: "WindState", "WindStateController", ""WindOnState", "WindOffState" and "ObjectsAffectedByWind". I wanted this component to apply a force for a certain amount of time when the player object triggers it. Therefore, I needed to add a timer. 
+
+![Screenshot 2023-02-28 114400](https://user-images.githubusercontent.com/114989045/221845420-4a03199a-709f-4bc6-bf61-b7bc2c0727e9.png)
+
+As shown above, I created this if statement to use "Time.deltaTime" to count down when when the player hits the trigger. This worked the first time when the player triggers it, however, it wouldn't do it again after triggering it. I wanted it to iterate everytime the countdown finished and the player triggered it again.
 
 #### SOLUTION:
+I realised that as I had used a state machine to create this component, I needed to update the next state to the "offState" again after the "Destroyed" function that stops that current state.
+
+![Screenshot 2023-02-28 114414](https://user-images.githubusercontent.com/114989045/221845618-3611d8d3-a963-4d1b-9e32-6052c81660bf.png)
