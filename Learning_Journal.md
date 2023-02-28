@@ -137,7 +137,15 @@ I realised that as I had used a state machine to create this component, I needed
 
 
 #### PROBLEM:
-Now that I had the states, the trigger and timer working, I needed the "WindOnState" to apply a force to all interactable objects in the scene. 
+Now that I had the states, the trigger and timer working, I needed the "WindOnState" to apply a force to all interactable objects in the scene. I tried to create a function called "ApplyForce()" in the "WindOnState" script, however, this did not work as I couldn't access the "GetComponent" in this script. This may have been because the "WindOnState" is using the "WindState" behaviour rather than the "MonoBehaviour" Unity provides.
 
 #### SOLUTION:
+I instead created the "ApplyForce()" function in the "WindStateController" script and called it in the "WindOnState" script as shown below:
+
+![Screenshot 2023-02-28 122507](https://user-images.githubusercontent.com/114989045/221853664-59d655c2-25e3-43fd-aab6-d3647f74e008.png)
+
+![Screenshot 2023-02-28 122454](https://user-images.githubusercontent.com/114989045/221853698-5f4b89ce-b383-44aa-a74c-6bbcb4f9aa63.png)
+
+
+
 
