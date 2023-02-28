@@ -134,3 +134,10 @@ As shown above, I created this if statement to use "Time.deltaTime" to count dow
 I realised that as I had used a state machine to create this component, I needed to update the next state to the "offState" again after the "Destroyed" function that stops that current state.
 
 ![Screenshot 2023-02-28 114414](https://user-images.githubusercontent.com/114989045/221845618-3611d8d3-a963-4d1b-9e32-6052c81660bf.png)
+
+
+#### PROBLEM:
+Now that I had the states, the trigger and timer working, I needed the "WindOnState" to apply a force to all interactable objects in the scene. 
+
+#### SOLUTION:
+
