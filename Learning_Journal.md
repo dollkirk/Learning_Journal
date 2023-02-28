@@ -147,5 +147,16 @@ I instead created the "ApplyForce()" function in the "WindStateController" scrip
 ![Screenshot 2023-02-28 122454](https://user-images.githubusercontent.com/114989045/221853698-5f4b89ce-b383-44aa-a74c-6bbcb4f9aa63.png)
 
 
+#### PROBLEM:
+I wanted to make the wind direction cycle left to right constantly after every 5 seconds. I created this if statement in the "WindStateController" script in the "ApplyForce()" function:
+
+![Screenshot 2023-02-28 133650](https://user-images.githubusercontent.com/114989045/221869971-93d03288-baf5-4efc-bb47-a18505bafb3a.png)
+
+However, this did not loop the cycle as my component is using states and I would change the state from "WindOn" to "WindOff".
+
+#### SOLUTION:
+Therefore, I edited the "Update()" function where the timer counts down. I changed the states when the timer ran out and then immediately changed it back to the on state again:
+
+![Screenshot 2023-02-28 133945](https://user-images.githubusercontent.com/114989045/221870667-85108115-ed93-4e4b-af16-678d230ce62a.png)
 
 
