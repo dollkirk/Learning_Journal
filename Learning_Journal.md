@@ -76,12 +76,19 @@ I changed the if statement that was checking the player object's rigidbody veloc
 ![Screenshot 2023-02-13 124625](https://user-images.githubusercontent.com/114989045/218461304-55ea7117-7924-417c-88b0-b1b21cd8074a.png)
 
 
-## Component Package Two - Companion Controller
+## Component Package Two - Companion Count
 
 #### PROBLEM:
+I created a script called "CompanionCount" and created a simple count system for everytime the player object collides with an object with the tag "AI" which are the companion objects. It then displays the number of companions collected with a Text Mesh Pro UI element. However, it counts the same object collision multiple times. I want it to only count the companions once.
 
+![Screenshot 2023-03-07 111440](https://user-images.githubusercontent.com/114989045/223406860-f29bd898-dc25-479e-b9fd-0c39d8516d67.png)
 
 #### SOLUTION:
+
+
+
+
+
 
 
 ## Component Package Three - Reset Area/Companions
