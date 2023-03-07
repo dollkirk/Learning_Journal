@@ -78,12 +78,7 @@ I changed the if statement that was checking the player object's rigidbody veloc
 
 ## Component Package Two - Companion Count
 
-#### PROBLEM:
-I created a script called "CompanionCount" and created a simple count system for everytime the player object collides with an object with the tag "AI" which are the companion objects. It then displays the number of companions collected with a Text Mesh Pro UI element. However, it counts the same object collision multiple times. I want it to only count the companions once.
 
-![Screenshot 2023-03-07 111440](https://user-images.githubusercontent.com/114989045/223406860-f29bd898-dc25-479e-b9fd-0c39d8516d67.png)
-
-#### SOLUTION:
 
 
 
@@ -126,6 +121,13 @@ I wanted to change the state back to the "AIEnemySate" script when it is in the 
 I realised that the target points were being set in the "Start()" function. This meant I needed to set them again when the state changes back to "AIEnemyState". Therefore, i put the target transforms into this trigger function as shown below:
 
 ![Screenshot 2023-02-21 104735](https://user-images.githubusercontent.com/114989045/220324503-e6213ba9-295a-4ce1-8896-79330eb32d8f.png)
+
+#### PROBLEM:
+I created a script called "CompanionCount" and created a simple count system for everytime the player object collides with an object with the tag "AI" which are the companion objects. It then displays the number of companions collected with a Text Mesh Pro UI element. However, it counts the same object collision multiple times. I want it to only count the companions once.
+
+![Screenshot 2023-03-07 111440](https://user-images.githubusercontent.com/114989045/223406860-f29bd898-dc25-479e-b9fd-0c39d8516d67.png)
+
+#### SOLUTION:
 
 
 ## Component Package Four - Wind Cycle
