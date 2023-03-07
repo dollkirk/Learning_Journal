@@ -76,9 +76,18 @@ I changed the if statement that was checking the player object's rigidbody veloc
 ![Screenshot 2023-02-13 124625](https://user-images.githubusercontent.com/114989045/218461304-55ea7117-7924-417c-88b0-b1b21cd8074a.png)
 
 
-## Component Package Two - Companion Count
+## Component Package Two - Platform movements
+
+#### PROBLEM:
+I created two scripts called "MovingPlatformController" and "WayPoints". In the "WayPoints" script, it is keeping count of the waypoints of the moving platform path. The "MovingPlatformController" is moving the platform using transforms and "Lerp". I set two waypoints for the platform to move between and this works. However, I want the platform to rotate in the same rotation that the waypoints are in.
+
+![Screenshot 2023-03-07 142622](https://user-images.githubusercontent.com/114989045/223452314-10f5f1cf-54b4-49f1-bfa0-2bb161cbb439.png)
 
 
+#### SOLUTION:
+I used "transform.rotation" and "Quarternion.Lerp" to rotate the platform in the same position as the waypoint that is next. This is shown below:
+
+![Screenshot 2023-03-07 143154](https://user-images.githubusercontent.com/114989045/223452586-f2f4d431-73bf-4a35-ad68-a5c6779c24ab.png)
 
 
 
