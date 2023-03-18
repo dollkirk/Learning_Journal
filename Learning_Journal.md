@@ -76,7 +76,7 @@ I changed the if statement that was checking the player object's rigidbody veloc
 ![Screenshot 2023-02-13 124625](https://user-images.githubusercontent.com/114989045/218461304-55ea7117-7924-417c-88b0-b1b21cd8074a.png)
 
 
-## Component Package Two - Platform movements
+## Component Package Two - Platform movement/Respawn Checkpoints
 
 #### PROBLEM:
 I created two scripts called "MovingPlatformController" and "WayPoints". In the "WayPoints" script, it is keeping count of the waypoints of the moving platform path. The "MovingPlatformController" is moving the platform using transforms and "Lerp". I set two waypoints for the platform to move between and this works. However, I want the platform to rotate in the same rotation that the waypoints are in.
@@ -89,10 +89,19 @@ I used "transform.rotation" and "Quarternion.Lerp" to rotate the platform in the
 
 ![Screenshot 2023-03-07 143154](https://user-images.githubusercontent.com/114989045/223452586-f2f4d431-73bf-4a35-ad68-a5c6779c24ab.png)
 
+#### PROBLEM:
+I realised that this component was too small, therefore, I wanted to create a respawn checkpoint system as well. I first found a tutorial online and created three scripts: "CheckpointController", "PlayerPos" and "RespawnCheckpoints". The tutorial was based on a 2D game and was therefore using Vector2.
 
+#### SOLUTION:
+This was an easy fix as I just replaced all Vector2 details to Vector3 for it to work in 3D.
 
+#### PROBLEM:
+I followed the tutorial step by step and found that the creator was using "UnityEngine.SceneManagement" to reload the scene everytime the player needed to respawn at the correct checkpoint. I just wanted the player to transform position back to the last checkpoint that was triggered.
 
+#### SOLUTION:
+In the script "PlayerPos", I edited the if statement checking for the correct key input in the "Update()" function. I deleted the scene management line of code which reloaded the scene everythime and replaced it with what is shown below:
 
+![Screenshot 2023-03-18 210110](https://user-images.githubusercontent.com/114989045/226139887-0edba30a-fcb5-47c6-8d9f-8726580823a7.png)
 
 
 ## Component Package Three - Reset Area/Companions
